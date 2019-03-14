@@ -1,0 +1,100 @@
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(238, 237, 245)
+}
+
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+header{
+    background: #4fa9e0;
+    color: #ffffff;
+    min-height: 70px;
+    border-bottom: #888585 3px solid; 
+    padding: 0;
+    margin: 0;
+    
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    padding: 0 20px 0 20px;
+    display: inline;
+}
+
+header #appTitle{
+
+    float: left;
+
+}
+
+header nav{
+    float: right;
+    text-transform: uppercase;
+    margin-top: 35px;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+#showcase{
+    min-height: 500px;
+    background-image:url('https://pmcvariety.files.wordpress.com/2018/04/twitter-logo.jpg?w=1000&h=562&crop=1');
+    background-repeat: no-repeat;
+    background-position-y:-60px; 
+    background-position: center;
+    background-size: 1329px 600px;
+}
+
+
+p{
+    width: 20%
+}
+
+#feedback{
+    float: right;
+    margin-top: 70px;
+}
+
+
+input[type=text]:focus{
+    border: 2px solid #8d8989; 
+    width: 200px;
+    height: 80px;
+}
+
+
+
+footer{
+    background-color: #4fa9e0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-top: #888585 3px solid;
+
+}
+
+footer p{
+    width: 40%;
+    float: right;
+    margin-bottom: 20px; 
+}
