@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(238, 237, 245)
+}
+
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+header{
+    background: #4fa9e0;
+    color: #ffffff;
+    min-height: 70px;
+    border-bottom: #888585 3px solid; 
+    padding: 0;
+    margin: 0;
+    
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    padding: 0 20px 0 20px;
+    display: inline;
+}
+
+header #appTitle{
+
+    float: left;
+
+}
+
+header nav{
+    float: right;
+    text-transform: uppercase;
+    margin-top: 35px;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+

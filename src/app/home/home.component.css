@@ -1,0 +1,40 @@
+#showcase{
+    min-height: 500px;
+    background-image:url('https://pmcvariety.files.wordpress.com/2018/04/twitter-logo.jpg?w=1000&h=562&crop=1');
+    background-repeat: no-repeat;
+    background-position-y:-60px; 
+    background-position: center;
+    background-size: 1329px 600px;
+}
+
+
+p{
+    width: 20%
+}
+
+
+footer p{
+    width: 40%;
+    float: right;
+    margin-bottom: 10px; 
+}
+
+
+footer{
+    background-color: #4fa9e0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-top: #888585 3px solid;
+
+}
+#feedback{
+    float: right;
+    margin-top: 70px;
+}
+
+
+input[type=text]:focus{
+    border: 2px solid #8d8989; 
+    width: 200px;
+    height: 80px;
+}

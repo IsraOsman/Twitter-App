@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { HomeComponent} from './home/home.component';
+import { RandomComponent} from './random/random.component';
+import { TweetsComponent} from './tweets/tweets.component';
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'random', component: RandomComponent },
+  { path: 'tweets', component: TweetsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
