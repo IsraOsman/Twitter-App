@@ -11,7 +11,9 @@ export class TweetsComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getUsers();
+    this.data.getUsers().subscribe(data => {
+      console.log("tweeter data: ", data);
+    });
   }
 
 

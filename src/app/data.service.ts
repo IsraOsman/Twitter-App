@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { tweetSearch } from '/ServerFile/index.js';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http: tweetSearch ) { 
-    getUsers(){
-      return this.http.get('https://api/tweets')
-    }
+  constructor(private http: HttpClient ) {
+    
+  }
+
+  getUsers(){
+    return this.http.get('http://localhost:3000/api/tweets')
   }
 }

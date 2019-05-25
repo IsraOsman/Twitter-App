@@ -11,5 +11,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
   }
 }
