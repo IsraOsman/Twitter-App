@@ -17,18 +17,19 @@ function  tweetSearch(){
     return Twitter.get('search/tweets', params);
 }
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname + '/dist/index.html'));
-});
-app.use(serve(__dirname + '/dist'));
-
-
 app.get('/api/tweets', (req, res) => {
     tweetSearch().then(twitterResponse => {
         res.send(twitterResponse.data.statuses); 
     });
 });
 
+app.get('/', (request, response) => {
+    response.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+app.use(serve(__dirname + '/dist'));
 
-app.listen(3000, () => console.log("Hello"));
+
+
+
+app.listen(3000, () => console.log("Hellooooo"));
 
