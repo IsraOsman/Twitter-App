@@ -1,8 +1,14 @@
 
-<div id="Search">
-<h3>Search tweets by username or content</h3>
-<input type="text" placeholder="search.....">
-<button (click) = "getUsers()">Enter</button>
+<div>
+    <h1>Search tweets by username or content</h1>
+    <input type="search"  placeholder="Search..."  [(ngModel)]="input" (keyup.enter)="ngOnInit"/>     
+    <button (click) = "ngOnInit()">Enter</button>
+
+</div>
+
+<div  class = "myTweets" *ngFor = "let tweet of tweets"> 
+    <div class = "userName"> <p>@{{tweet.user.screen_name}}</p></div>
+    <div class = "text"><p>{{tweet.text}}</p></div>
 </div>
 
 

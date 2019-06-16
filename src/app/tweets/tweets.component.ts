@@ -7,13 +7,14 @@ import { DataService } from '../data.service';
   styleUrls: ['./tweets.component.css']
 })
 export class TweetsComponent implements OnInit {
-  users: object; 
+  tweets: object; 
+  input: '';
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      console.log("tweeter data: ", data);
-    });
+    this.data.getUsers(this.input).subscribe(data => {
+      this.tweets = data; 
+      });
   }
 
 

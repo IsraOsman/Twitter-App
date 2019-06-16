@@ -1,4 +1,3 @@
-//import { TweetsComponent } from './scr/app/tweets';
 var Twit = require('twit');
 var config = require('./config.js');
 var Twitter = new Twit(config);
@@ -8,24 +7,41 @@ const app = express;
 var serve = require('express-static')
 
 
-function  tweetSearch(){
+function  tweetSearch(input){
     var params = {
-      q: 'Trump', 
+      q: input, 
       result_type: 'recent',
-      lang: 'en'    
+      lang: 'en',
+      count: 5
     } 
     return Twitter.get('search/tweets', params);
 }
-
 app.get('/api/tweets', (req, res) => {
-    tweetSearch().then(twitterResponse => {
+    tweetSearch(req.query.input).then(twitterResponse => {
         res.send(twitterResponse.data.statuses); 
     });
 });
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname + '/dist/index.html'));
+
+function randomTweetFinder(){
+    var params = {
+        screen_name: 'Bill Gates',
+        count: 10
+    }
+
+    return Twitter.get('statuses/user_timeline', params);
+};
+app.get('/api/random', (req,res) => {
+ randomTweetFinder().then(tweeet => {
+    res.send(tweeet.t);
+})
 });
+
+app.get('/', (request, response) => {   
+    response.sendFile(path.join(__dirname + '/dist/index.html'));
+    
+});
+
 app.use(serve(__dirname + '/dist'));
 
 

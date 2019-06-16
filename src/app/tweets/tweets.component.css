@@ -1,8 +1,31 @@
-#Search{
-    width: 90%;
-    margin: auto;
+input{
+    margin-bottom: 30px;
+    margin-left: 450px;
     overflow: hidden;
+    width: 400px;
+    align-content: center;
 }
-button{
-    color: Blue;
+
+h1{
+    text-align: center;
+}
+.userName{
+    background-color: #4fa9e0 ;
+    margin-left: 20px; 
+    padding: 10px;
+    border: 2px solid lightgrey;
+    width: 400px;
+}
+.text{
+    background-color: gray;
+    width: 400px;
+    border: 2px solid lightgrey;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.myTweets{
+    margin-top: 50px;
+    margin-left: 450px;
 }

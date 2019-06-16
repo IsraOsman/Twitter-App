@@ -4,14 +4,15 @@
   "description": "TwitterAppServer ",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"nodemon index.js\" \"cd .. && ng build --watch\""
-
+    "start": "concurrently  \"cd .. && ng build --watch\"  \"nodemon index.js\""
   },
   "author": "IsraOsman",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "express-static": "^1.2.6",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "twit": "^2.2.11"
   },
   "devDependencies": {

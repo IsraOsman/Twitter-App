@@ -10,7 +10,11 @@ export class DataService {
     
   }
 
-  getUsers(){
-    return this.http.get('http://localhost:3000/api/tweets')
+  getUsers(input){
+    return this.http.get('/api/tweets?input=' +input);
+  }
+
+  getTweets(){
+    return this.http.get('http://localhost:3000/api/random');
   }
 }
