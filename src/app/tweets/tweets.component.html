@@ -7,8 +7,16 @@
 </div>
 
 <div  class = "myTweets" *ngFor = "let tweet of tweets"> 
-    <div class = "userName"> <p>@{{tweet.user.screen_name}}</p></div>
-    <div class = "text"><p>{{tweet.text}}</p></div>
+        
+    <div class = "userName"> 
+        <p id = 'name'>{{tweet.user.name}}</p>
+        <p id = 'screenName'>@{{tweet.user.screen_name}}</p>
+    </div>
+    <div class = "text">
+        <p>{{tweet.text}}</p>
+        <p id = 'time'>created at  {{tweet.created_at}}</p>
+    </div>
+    
 </div>
 
 

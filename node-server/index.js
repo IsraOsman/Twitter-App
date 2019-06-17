@@ -24,18 +24,16 @@ app.get('/api/tweets', (req, res) => {
 
 
 function randomTweetFinder(){
-    var params = {
-        screen_name: 'Bill Gates',
+    var parameters = {
+        screen_name: 'BillGates',
         count: 10
-    }
+    };
 
-    return Twitter.get('statuses/user_timeline', params);
+    return Twitter.get('statuses/user_timeline', parameters, function(err, data, response) {
+        console.log(data);
+    });
 };
-app.get('/api/random', (req,res) => {
- randomTweetFinder().then(tweeet => {
-    res.send(tweeet.t);
-})
-});
+randomTweetFinder();
 
 app.get('/', (request, response) => {   
     response.sendFile(path.join(__dirname + '/dist/index.html'));
