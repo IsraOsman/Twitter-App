@@ -4,7 +4,7 @@
   "description": "TwitterAppServer ",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently  \"cd .. && ng build --watch\"  \"nodemon index.js\""
+    "start": "concurrently  \"cd ../Angular && ng build --watch\"  \"nodemon index.js\""
   },
   "author": "IsraOsman",
   "license": "ISC",

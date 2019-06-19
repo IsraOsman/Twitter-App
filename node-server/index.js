@@ -6,44 +6,44 @@ const express = require('express')();
 const app = express; 
 var serve = require('express-static')
 
-
-function  tweetSearch(input){
+function tweetSearch(input){
     var params = {
       q: input, 
       result_type: 'recent',
       lang: 'en',
       count: 5
     } 
+
     return Twitter.get('search/tweets', params);
 }
+
+function randomTweetFinder(){
+    var favoriteUsers = ["BillGates","BarackObama","simonsinek","shugairi","CNN"];
+    var randomUser = favoriteUsers[Math.floor(Math.random()*favoriteUsers.length)];
+    var parameters = {
+        screen_name: randomUser,
+        count: 1
+    };
+
+    return Twitter.get('statuses/user_timeline', parameters);
+};
+
 app.get('/api/tweets', (req, res) => {
     tweetSearch(req.query.input).then(twitterResponse => {
         res.send(twitterResponse.data.statuses); 
     });
 });
 
-
-function randomTweetFinder(){
-    var parameters = {
-        screen_name: 'BillGates',
-        count: 10
-    };
-
-    return Twitter.get('statuses/user_timeline', parameters, function(err, data, response) {
-        console.log(data);
+app.get('/api/random', (req, res) => {
+    randomTweetFinder().then(function(result){
+        res.send(result.data);
     });
-};
-randomTweetFinder();
+});
 
 app.get('/', (request, response) => {   
     response.sendFile(path.join(__dirname + '/dist/index.html'));
-    
 });
 
 app.use(serve(__dirname + '/dist'));
 
-
-
-
 app.listen(3000, () => console.log("Hellooooo"));
-

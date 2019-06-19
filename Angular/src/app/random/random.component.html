@@ -1,0 +1,14 @@
+<div id="random">
+<h1>Random</h1>
+<button (click) = "ngOnInit()">Click</button>
+</div>
+
+<div  class = "myTweets"  *ngFor = "let random of $randomTweets"> 
+    <div class = "userName">
+        <p id = "name">{{random.user.name}}</p>
+        <p id = "screenName">@{{random.user.screen_name}}</p>
+    </div>
+    <div class = "text"><p>{{random.text}}</p>
+        <p>Created at {{random.created_at}}</p>
+    </div>
+</div>
