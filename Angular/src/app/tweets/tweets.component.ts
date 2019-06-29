@@ -12,11 +12,13 @@ export class TweetsComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
+  
+  }
+
+  searchTweet(){
     this.data.getUsers(this.input).subscribe(data => {
       this.tweets = data; 
       });
   }
 
-
-  
 }

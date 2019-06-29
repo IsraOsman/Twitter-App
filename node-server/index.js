@@ -11,7 +11,7 @@ function tweetSearch(input){
       q: input, 
       result_type: 'recent',
       lang: 'en',
-      count: 5
+      count: 12
     } 
 
     return Twitter.get('search/tweets', params);

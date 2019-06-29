@@ -10,8 +10,6 @@ const routes: Routes = [
   { path: 'tweets', component: TweetsComponent },
 ];
 
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

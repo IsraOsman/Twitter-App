@@ -10,10 +10,12 @@ export class RandomComponent implements OnInit {
   constructor(private randomData: DataService) { }
 
   ngOnInit() {
-    this.randomData.getTweets().subscribe(randomData => {
-      console.log('My random +', randomData);
-      this.$randomTweets = randomData; 
-      });
+    
   }
-
+  randomTweet(){
+  this.randomData.getTweets().subscribe(randomData => {
+    console.log('My random +', randomData);
+    this.$randomTweets = randomData; 
+    });
+  }
 }
