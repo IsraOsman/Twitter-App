@@ -46,4 +46,4 @@ app.get('/', (request, response) => {
 
 app.use(serve(__dirname + '/dist'));
 
-app.listen(3000, () => console.log("Hellooooo"));
+app.listen(process.env.port || 8080);
